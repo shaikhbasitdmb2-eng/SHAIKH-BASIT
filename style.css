@@ -1,0 +1,27 @@
+/*
+Theme Name: CoilCube OEM Motorcycle Spares
+Theme URI: https://coilcube.com
+Author: Shaikh Basit
+Author URI: https://coilcube.com
+Description: Modern Motorcycle Spare Parts & Genuine OEM Accessories Storefront featuring a rotating spoked wheel hero, 2x2 collection gallery, model compatibility filters, flash sales, local payment methods (JazzCash, EasyPaisa, Visa, Mastercard, PayPak, SadaPay, NayaPay, IBFT), and live InsForge backend integration.
+Version: 2.0.0
+Requires at least: 5.8
+Tested up to: 6.9
+Requires PHP: 7.4
+License: Apache-2.0
+License URI: https://www.apache.org/licenses/LICENSE-2.0
+Text Domain: coilcube
+Tags: e-commerce, motorcycle-parts, auto-parts, store, custom-theme, full-width-template
+*/
+
+/* WordPress Theme Root Stylesheet - Core storefront styles are loaded from /wp-assets/coilcube-app.css */
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: #ffffff;
+  color: #111111;
+}
