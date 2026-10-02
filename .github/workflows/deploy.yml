@@ -15,7 +15,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: 18
+        node-version: 20
 
     - name: Install dependencies
       run: npm install
@@ -23,12 +23,12 @@ jobs:
     - name: Build project
       run: npm run build
 
-    - name: Upload via LFTP
+    - name: Deploy via LFTP
       run: |
         sudo apt-get update && sudo apt-get install -y lftp
         lftp -c "
         set ftp:ssl-allow no;
-        open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }};
+        open -u ${{ secrets.FTP_USERNAME }},'${{ secrets.FTP_PASSWORD }}' ${{ secrets.FTP_SERVER }};
         mirror --reverse --delete --verbose ./dist/ ./;
         quit;
         "
